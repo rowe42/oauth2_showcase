@@ -40,8 +40,8 @@ public class OAuth2AuthorizationServerConfigJwt extends AuthorizationServerConfi
             .secret("secret")
             .authorizedGrantTypes("password", "authorization_code", "refresh_token")
             .scopes("bar", "read", "write")
-            .accessTokenValiditySeconds(10)
-            .refreshTokenValiditySeconds(60);
+            .accessTokenValiditySeconds(3)
+            .refreshTokenValiditySeconds(6);
     }
 
     @Bean
