@@ -25,6 +25,7 @@ import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.security.oauth2.client.OAuth2RestOperations;
 import org.springframework.security.oauth2.client.resource.UserRedirectRequiredException;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 /**
@@ -39,7 +40,7 @@ public class TestController {
     public OAuth2RestOperations restTemplate;
 
     @Autowired
-    private JwtTokenStore tokenStore;
+    private TokenStore tokenStore;
 
     @RequestMapping(method = RequestMethod.GET, value = "/throw")
     public @ResponseBody
